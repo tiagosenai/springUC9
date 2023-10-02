@@ -6,4 +6,6 @@ import br.edu.senai.springUC9.orm.Categoria;
 
 public interface CategoriaServico {
 	public List<Categoria> listarCategorias();
+	
+	public Categoria salvarCategorias(Categoria categoria);
 }
