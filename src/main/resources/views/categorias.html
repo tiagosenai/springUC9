@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Categorias</title>
+</head>
+<body>
+<h3>Categorias</h3>
+<a href="/">Home Page</a>
+<a href="/categorias">Categorias</a>
+<hr>
+<h2>Categorias Cadastradas</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Descrição</th>
+			<th>Tributação</th>
+			<th>Ativo</th>
+			<th>Opções</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="categoria:${categoria}">
+			<td th:text=${categoria.id}>Id</td>
+			<td th:text=${categoria.descricao}>Descrição</td>
+			<td th:text=${categoria.tributacao}>Tributação</td>
+			<td th:text=${categoria.ativo}>Ativo</td>
+			<td>Apagar e Editar</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
