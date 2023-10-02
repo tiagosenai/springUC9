@@ -15,6 +15,7 @@ public class Categoria {
 	private Integer id;
 	private String descricao;
 	private String ativo;
+	private String tributacao;
 	
 	public Integer getId() {
 		return id;
@@ -33,5 +34,11 @@ public class Categoria {
 	}
 	public void setAtivo(String ativo) {
 		this.ativo = ativo;
+	}
+	public String getTributacao() {
+		return tributacao;
+	}
+	public void setTributacao(String tributacao) {
+		this.tributacao = tributacao;
 	}
 }
