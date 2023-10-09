@@ -29,7 +29,7 @@
 			<td th:text=${categoria.ativo}>Ativo</td>
 			<td>
 				<a th:href="@{categoria/{id}(id=${categoria.id})}">Apagar</a>
-				<a href="">Editar</a>
+				<a th:href="@{categoria/editar/{id}(id=${categoria.id})}">Editar</a>
 			</td>
 		</tr>
 	</tbody>

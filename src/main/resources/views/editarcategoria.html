@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Editando Categoria</h2>
+	<form th:action="@{/categoria/{id}(id=${categoria.id})}" th:object="${categoria}" method="POST">
+		<label>Descrição</label>
+		<input type="text" name="descricao" th:field="*{descricao}" required><br>
+		<label>Tributação</label>
+		<input type="text" name="tributacao" th:field="*{tributacao}" required><br>
+		<label>Ativo</label>
+		<input type="text" name="ativo" th:field="*{ativo}" required><br>
+		<input type="submit" value="Atualizar">
+	</form>
+</body>
+</html>

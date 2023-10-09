@@ -45,4 +45,21 @@ public class SpringUC9Controller {
 		servico.apagarCategoria(id);
 		return "redirect:/categorias";
 	}
+	
+	@GetMapping({"/categoria/editar/{id}"})
+	public String editarCategoria(@PathVariable Integer id, Model modelo) {
+		modelo.addAttribute("categoria", servico.consultarCategoriasId(id));
+		return "editarCategoria";
+	}
+	
+	@PostMapping("/categoria/{id}")
+	public String atualizarCategoria(@PathVariable Integer id, @ModelAttribute("categoria") Categoria categoria, Model modelo) {
+		Categoria cat = servico.consultarCategoriasId(id);
+		cat.setId(id);
+		cat.setDescricao(categoria.getDescricao());
+		cat.setTributacao(categoria.getTributacao());
+		cat.setAtivo(categoria.getAtivo());
+		servico.atualizarCategorias(cat);
+		return "redirect:/categorias";
+	}
 }
