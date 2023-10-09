@@ -27,7 +27,10 @@
 			<td th:text=${categoria.descricao}>Descrição</td>
 			<td th:text=${categoria.tributacao}>Tributação</td>
 			<td th:text=${categoria.ativo}>Ativo</td>
-			<td>Apagar e Editar</td>
+			<td>
+				<a th:href="@{categoria/{id}(id=${categoria.id})}">Apagar</a>
+				<a href="">Editar</a>
+			</td>
 		</tr>
 	</tbody>
 </table>

@@ -8,4 +8,6 @@ public interface CategoriaServico {
 	public List<Categoria> listarCategorias();
 	
 	public Categoria salvarCategorias(Categoria categoria);
+	
+	public void apagarCategoria(Integer id);
 }
